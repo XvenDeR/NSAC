@@ -36,6 +36,8 @@ Config.currentFramework = 'ESX' --[[Options: ESX | VRP | NONE]]
 Config.fsName = 'nsac.lua' --[[Name of the file to be spread]]
 Config.fsManifest = '__resource.lua' --[[Don't modify if you have no clue of what you're doing | __resource.lua or fxmanifest.lua | ]]
 
+Config.showInstalled = true -- If set to true it prints in console which resources are guarded now.
+Config.showSkipped = false -- If set to true it prints in console the skipped resources.
 --[[
 	This is the code that will be inside the fsName file(s).
 	I would recommend you to either obfuscate it with IronBrew2 or with XFuscator to hide your log/trigger events.	
