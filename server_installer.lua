@@ -88,13 +88,20 @@ function setall(dir, bool)
 					file:write(code)
 					file:close()
 					resources[1] = resources[1]+1
-					print("^2Finished guarding "..resname.." resource successfully.^7")
+					
+					if Config.showInstalled then
+						print("^2Finished guarding "..resname.." resource successfully.^7")
+					end
 				else
 					print("^1Failed guarding "..resname..".^7")
 				end
 				resources[2] = resources[2]+1
 			else
 				resources[3] = resources[3]+1
+
+				if Config.showSkipped then
+					print("^4'"..resname.."',^7")
+				end
 			end
 		else
 			file:seek("set", 0)
